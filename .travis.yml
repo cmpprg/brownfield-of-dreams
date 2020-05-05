@@ -1,4 +1,4 @@
-langauge: ruby
+language: ruby
 rbenv:
 - 2.5.3
 addons:
@@ -12,5 +12,6 @@ script:
 deploy:
   provider: heroku
   api_key:
-  app:
+    secure: QbpXAR9sgeGxAdEfUPOhe9aLNgnCSlITa8MhDCNniU/y1KR6qE9kHPBWtcOp+EfWP/2SyNbVaTdS/Itq2gvAWnOg4IfcDkWqiisMZnXJGf3roBSABe0DBlFUHJ/LaBkyh5sGxtDOYMA4FVTHo2i5bs8TWtTbohAmCgWMpNc2A94gkMuqYB6KvkD/QBmd72LDghQBZF/TwH94+s+0jni0QLZA0joCl3uXkTWLCsFeiCOdWUxQY8wNJuzTJHYzO9/Z4OM3Aqem3bHGx0AyuFY26CFleocwO3/annhmo/teoDDy47vtgGzk/t+Zo77Ky7ARN3PIoqhXUMX2Fj3n3nqgOV4MRi04Ez2WDcyV0qOX2uC22dRg804clJn8axORfLOHV1UUTDuPGgAHol/szVr2W8jR5pMXUZGD/D2gj5eJiGHM1PrfzoQhlt5hej8Gc1efEOKi/M0HMW12FpRKKQNTWeXZl6Fg1VoJKHVh9PQWyp036J6lldPwQBefpzZosUQ4zkTDkud2bFUdRHiAQ+5TlOo7clNLFFwoeVV6lRIQiDQ2ufCVGyvE9du9lCGVMt+sYqRgLCb2uVq+h5VYX8rhDgB+nJntiKCZKwwJw9CKG2HSLlqNJCmzBLqJ0N23Sg/x9XziYv/JzC1aJ0GnPc5kHknVswUleXVMXB0dotZst1I=
+  app: brownfield-jg-rc
   run: rails db:migrate
