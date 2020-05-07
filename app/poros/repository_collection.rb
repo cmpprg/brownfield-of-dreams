@@ -1,8 +1,8 @@
 class RepositoryCollection
   attr_reader :repos
   def initialize(repos_info)
-     @repos_info= repos_info
-     @repos = []
+    @repos_info = repos_info
+    @repos = []
   end
 
   def create_repo(info)
@@ -23,5 +23,4 @@ class RepositoryCollection
     create_collection
     @repos
   end
-
 end
