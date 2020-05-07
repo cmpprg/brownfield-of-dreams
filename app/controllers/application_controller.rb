@@ -1,8 +1,9 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user
-  helper_method :find_bookmark
-  helper_method :list_tags
-  helper_method :tutorial_name
+  helper_method :current_user,
+                :find_bookmark,
+                :list_tags,
+                :tutorial_name,
+                :github_token_present?
 
   add_flash_types :success
 
@@ -20,5 +21,9 @@ class ApplicationController < ActionController::Base
 
   def four_oh_four
     raise ActionController::RoutingError, 'Not Found'
+  end
+
+  def github_token_present?
+    current_user.github_token.present?
   end
 end
