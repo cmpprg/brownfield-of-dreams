@@ -10,4 +10,12 @@
   <section>
     <h1>Bookmarked Segments</h1>
   </section>
+  <% if github_token_present? %>
+    <section class="github">
+      <h1>Github</h1>
+      <% @repos.each_with_index do |repo, index| %>
+        <p class="repo"><%= link_to repo.name, repo.url, id:"#repo-#{index}" %></p>
+      <% end %>
+    </section>
+  <% end %>
 </section>
