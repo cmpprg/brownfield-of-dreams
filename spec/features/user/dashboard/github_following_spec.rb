@@ -16,11 +16,20 @@ RSpec.describe 'as a user on the user dashboard', type: :feature do
     end
   end
 
-  
+  it "I should see a list of links of people i'm following on github" do
+    visit "/dashboard"
+
+    expected_url = find_by_id("#followee-0")['href']
+
+    within('.following') do
+      expect(page).to have_link("#followee-0")
+      expect(page).to have_link("#followee-1")
+      click_link "#followee-0"
+    end
+
+    expect(current_url).to eql(expected_url)
+  end
 end
 
 
-
-# Then I should see a section for "Github"
-# And under that section I should see another section titled "Following"
 # And I should see list of users I follow with their handles linking to their Github profile
