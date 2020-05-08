@@ -16,7 +16,7 @@ RSpec.describe 'as a user on the user dashboard', type: :feature do
     end
   end
 
-  it "I should see a list of links of people i'm following on github" do
+  it "I should see a list of links of people i'm following on github", :js do
     visit "/dashboard"
 
     expected_url = find_by_id("#followee-0")['href']
