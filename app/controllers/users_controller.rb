@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
     @repos = RepositoryCollection.new(current_user).return_collection
     @followers = FollowersCollection.new(current_user).return_collection
+    @followees = FolloweesFactory.new(current_user).return_collection
   end
 
   def new
