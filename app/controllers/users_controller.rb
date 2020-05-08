@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   def show
-    @repos = gather_repo_objects if github_token_present?
+    return unless github_token_present?
+
+    @repos = RepositoryCollection.new(current_user).return_collection
+    @followers = FollowersCollection.new(current_user).return_collection
   end
 
   def new
@@ -22,10 +25,5 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :password)
-  end
-
-  def gather_repo_objects
-    repos_info = GithubV3API.new(current_user.github_token).repo_info[0..4]
-    RepositoryCollection.new(repos_info).return_collection
   end
 end
