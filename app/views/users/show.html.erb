@@ -22,7 +22,7 @@
       </section>
 
 
-      <section class='followers'>
+      <section class='followee'>
         <h3>Followers</h3>
         <% @followers.each_with_index do |follower, index| %>
           <p class='follower'><%= link_to follower.name, follower.url, id:"#follower-#{index}" %></p>
@@ -31,7 +31,11 @@
 
       <section class="following">
         <h3>Following</h3>
+        <% @followees.each_with_index do |followee, index| %>
+          <p class='followee'><%= link_to followee.name, followee.url, id:"#followee-#{index}" %></p>
+        <% end %>
       </section>
+
     </section>
   <% end %>
 </section>
