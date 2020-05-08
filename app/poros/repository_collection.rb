@@ -1,9 +1,16 @@
 class RepositoryCollection
   attr_reader :repos
-  def initialize(repos_info)
-    @repos_info = repos_info
+  def initialize(user)
+    @current_user = user
     @repos = []
   end
+
+  def return_collection
+    create_collection
+    @repos
+  end
+
+  private
 
   def create_repo(info)
     Repository.new(info)
@@ -14,13 +21,12 @@ class RepositoryCollection
   end
 
   def create_collection
-    @repos_info.each do |repo_info|
+    repos_info.each do |repo_info|
       add_repo(create_repo(repo_info))
     end
   end
 
-  def return_collection
-    create_collection
-    @repos
+  def repos_info
+    GithubV3API.new(@current_user.github_token).repo_info[0..4]
   end
 end
