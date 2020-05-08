@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe Repository, type: :model do
   before(:each) do
-    info = {name: "Repository Name", url: "http://www.example.com"}
+    info = {name: "Repository Name", html_url: "http://www.example.com"}
     @repo = Repository.new(info)
   end
 
