@@ -8,6 +8,7 @@ RSpec.describe "As a default user", type: :feature do
 
     it "I can see a section called 'github' and 5 linked repos listed." do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+
       visit "/dashboard"
       within(".github") do
         expect(page).to have_content("Github")
@@ -17,6 +18,7 @@ RSpec.describe "As a default user", type: :feature do
 
     it "I can click on one of the repo titles and be taken to that repo", :js do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+
       visit "/dashboard"
       expected_href = find_by_id("#repo-4")['href']
 
@@ -43,6 +45,7 @@ RSpec.describe "As a default user", type: :feature do
     it "I can't see a github section if I don't have a github token" do
       @user.github_token = nil
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+
 
       visit "/dashboard"
 
