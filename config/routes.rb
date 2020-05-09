@@ -24,7 +24,7 @@ Rails.application.routes.draw do
         put "tutorial_sequencer/:tutorial_id", to: "tutorial_sequencer#update"
       end
     end
-    resources :playlist, only:[:new, :create]
+    resources :import_playlist, only:[:new, :create]
   end
 
   get '/login', to: "sessions#new"
