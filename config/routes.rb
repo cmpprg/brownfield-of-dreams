@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   namespace :api do
     namespace :v1 do
       resources :tutorials, only:[:show, :index]
@@ -15,6 +16,7 @@ Rails.application.routes.draw do
     resources :tutorials, only: [:create, :edit, :update, :destroy, :new] do
       resources :videos, only: [:create]
     end
+
     resources :videos, only: [:edit, :update, :destroy]
 
     namespace :api do
@@ -22,6 +24,7 @@ Rails.application.routes.draw do
         put "tutorial_sequencer/:tutorial_id", to: "tutorial_sequencer#update"
       end
     end
+    resources :playlist, only:[:new, :create]
   end
 
   get '/login', to: "sessions#new"
