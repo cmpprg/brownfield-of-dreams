@@ -1,4 +1,4 @@
-class FollowersCollection
+class FollowersFactory
   def initialize(user)
     @current_user = user
     @followers = []

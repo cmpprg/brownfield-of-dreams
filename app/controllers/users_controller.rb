@@ -2,8 +2,8 @@ class UsersController < ApplicationController
   def show
     return unless github_token_present?
 
-    @repos = RepositoryCollection.new(current_user).return_collection
-    @followers = FollowersCollection.new(current_user).return_collection
+    @repos = RepositoryFactory.new(current_user).return_collection
+    @followers = FollowersFactory.new(current_user).return_collection
     @followees = FolloweesFactory.new(current_user).return_collection
   end
 
