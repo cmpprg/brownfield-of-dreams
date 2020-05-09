@@ -30,6 +30,3 @@ RSpec.describe 'as a user on the user dashboard', type: :feature do
     expect(current_url).to eql(expected_url)
   end
 end
-
-
-# And I should see list of users I follow with their handles linking to their Github profile
