@@ -13,15 +13,29 @@
   <% if github_token_present? %>
     <section class="github">
       <h1>Github</h1>
-      <% @repos.each_with_index do |repo, index| %>
-        <p class="repo"><%= link_to repo.name, repo.url, id:"#repo-#{index}" %></p>
-      <% end %>
+
+      <section class="repos">
+        <h3>Repositories</h3>
+        <% @repos.each_with_index do |repo, index| %>
+          <p class="repo"><%= link_to repo.name, repo.url, id:"#repo-#{index}" %></p>
+        <% end %>
+      </section>
+
+
       <section class='followers'>
         <h3>Followers</h3>
         <% @followers.each_with_index do |follower, index| %>
           <p class='follower'><%= link_to follower.name, follower.url, id:"#follower-#{index}" %></p>
         <% end %>
       </section>
+
+      <section class="following">
+        <h3>Following</h3>
+        <% @followees.each_with_index do |followee, index| %>
+          <p class='followee'><%= link_to followee.name, followee.url, id:"#followee-#{index}" %></p>
+        <% end %>
+      </section>
+
     </section>
   <% end %>
 </section>

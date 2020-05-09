@@ -33,19 +33,24 @@ RSpec.describe "As a default user", type: :feature do
       expect(current_url).to eql(expected_href)
     end
 
-    xit "I see my repos and not another registered user" do
+    it "I see my repos and not another registered user" do
       user1 = create(:user, github_token: ENV["GITHUB_TEST_API_KEY"])
       user2 = create(:user, github_token: ENV["ALT_GITHUB_TEST_API_KEY"])
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user1)
+      visit "/dashboard"
+      first_repo_user_1 = find_by_id('#repo-0').native.attributes['href'].value
 
-      # Ask project manager about testing this edge case
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user2)
+      visit "/dashboard"
+      first_repo_user_2 = find_by_id('#repo-0').native.attributes['href'].value
+
+      expect(first_repo_user_1).not_to eql(first_repo_user_2)
     end
 
     it "I can't see a github section if I don't have a github token" do
       @user.github_token = nil
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
-
 
       visit "/dashboard"
 

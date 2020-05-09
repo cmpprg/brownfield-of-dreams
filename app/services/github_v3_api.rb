@@ -11,6 +11,10 @@ class GithubV3API
     parse_response(response('followers'))
   end
 
+  def followees_info
+    parse_response(response('following'))
+  end
+
   private
 
   def connect

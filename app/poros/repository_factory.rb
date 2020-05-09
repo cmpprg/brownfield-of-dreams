@@ -1,4 +1,4 @@
-class RepositoryCollection
+class RepositoryFactory
   attr_reader :repos
   def initialize(user)
     @current_user = user
