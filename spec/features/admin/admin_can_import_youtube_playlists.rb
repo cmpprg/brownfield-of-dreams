@@ -12,6 +12,15 @@ RSpec.describe "As an admin", type: :feature do
 
       expect(page).to have_content('Import YouTube Playlist')
     end
+
+    it "When I click on import YouTube import link I am taken to form" do
+      visit '/admin/tutorials/new'
+
+      click_link 'Import YouTube Playlist'
+
+      expect(current_path).to eql('/admin/playlist/new')
+      expect(page).to have_field('playlist_id')
+    end
   end
 end
 
