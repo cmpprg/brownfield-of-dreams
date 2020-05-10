@@ -1,11 +1,11 @@
 class Admin::ImportPlaylistController < Admin::BaseController
-  def new
-  end
+  def new; end
 
   def create
     tutorial = Tutorial.create(tutorial_params)
     videos_params.each { |video| tutorial.videos.create(video) }
-    flash[:import_success] = "Successfully created tutorial. <a href=/tutorials/#{tutorial.id}>View it here</a>."
+    link = "<a href=/tutorials/#{tutorial.id}>View it here</a>"
+    flash[:import_success] = "Successfully created tutorial. #{link}."
     redirect_to admin_dashboard_path
   end
 
@@ -22,8 +22,8 @@ class Admin::ImportPlaylistController < Admin::BaseController
   end
 
   def videos_params
-    videos_info ||= YoutubeService.new.playlist_videos_info(params[:playlist_id])
-    videos_info.map do |video|
+    video_info ||= YoutubeService.new.playlist_videos_info(params[:playlist_id])
+    video_info.map do |video|
       {
         title: video[:snippet][:title],
         description: video[:snippet][:description],
@@ -33,5 +33,4 @@ class Admin::ImportPlaylistController < Admin::BaseController
       }
     end
   end
-
 end

@@ -1,9 +1,8 @@
 class YoutubeService
-
   def playlist_videos_info(playlist_id)
     total_results = []
     params = { part: 'snippet', playlistId: playlist_id,
-               maxResults: '50', pageToken: "" }
+               maxResults: '50', pageToken: '' }
     gather_videos_info(params, total_results)
     total_results
   end
@@ -44,7 +43,8 @@ class YoutubeService
     loop do
       response = get_json('youtube/v3/playlistItems', params)
       add_to_total(response[:items], total_results)
-      break if response[:nextPageToken] == nil
+      break if response[:nextPageToken].nil?
+
       params[:pageToken] = response[:nextPageToken]
     end
   end
