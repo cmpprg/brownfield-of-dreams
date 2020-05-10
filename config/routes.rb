@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   get '/login', to: "sessions#new"
   post '/login', to: "sessions#create"
   delete '/logout', to: "sessions#destroy"
+  get '/bookmark_notice', to: 'sessions#bookmark_notice'
 
   get '/dashboard', to: 'users#show'
   get '/about', to: 'about#show'
