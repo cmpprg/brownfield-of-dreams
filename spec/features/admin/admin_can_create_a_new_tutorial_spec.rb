@@ -15,7 +15,7 @@ RSpec.describe 'As an admin on the new tutorials page', type: :feature do
     click_button 'Save'
 
     tutorial = Tutorial.last
-    require 'pry'; binding.pry
+    
     expect(current_path).to eql(tutorial_path(tutorial))
 
     expect(page).to have_content('Successfully created tutorial.')
