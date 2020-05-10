@@ -15,13 +15,27 @@ RSpec.describe 'As an admin on the new tutorials page', type: :feature do
     click_button 'Save'
 
     tutorial = Tutorial.last
-    
+
     expect(current_path).to eql(tutorial_path(tutorial))
 
     expect(page).to have_content('Successfully created tutorial.')
     expect(tutorial.title).to eql('title of tutorial')
     expect(tutorial.description).to eql('description of tutorial')
     expect(tutorial.thumbnail).to eql('https://i.ytimg.com/vi/qMkRHW9zE1c/hqdefault.jpg')
+  end
+
+  it "If I leave out any info a sad flash appears and I stay on form." do
+    visit '/admin/tutorials/new'
+
+    fill_in 'tutorial[title]', with: ''
+    fill_in 'tutorial[description]', with: 'description of tutorial'
+    fill_in 'tutorial[thumbnail]', with: ''
+    click_button 'Save'
+
+    expect(page).to have_content('Title can\'t be blank and Thumbnail can\'t be blank')
+    expect(current_path).to eql('/admin/tutorials')
+
+    expect(page).to have_content('description of tutorial')
   end
 end
 
