@@ -1,10 +1,7 @@
-<h1>Import Playlist</h1>
-
-<h4>Please enter a valid playlist id</h4>
-
+<h2>Import Playlist</h2>
 
 <%= form_with url: "/admin/import_playlist", method: "post" do |form| %>
   <%= form.label :playlist_id, "Youtube Playlist ID" %>
-  <%= form.text_field :playlist_id %>
+  <%= form.text_field :playlist_id, class:'block col-4 field' %>
   <%= form.submit "Import" %>
 <% end %>
