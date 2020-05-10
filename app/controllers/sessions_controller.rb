@@ -18,4 +18,9 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to root_path
   end
+
+  def bookmark_notice
+    flash[:error] = 'User must login to bookmark videos.'
+    redirect_back(fallback_location: root_path)
+  end
 end
