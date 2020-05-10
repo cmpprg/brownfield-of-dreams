@@ -3,7 +3,6 @@ class Tutorial < ApplicationRecord
                                                   dependent: :destroy
 
   validates :title, presence: true
-  validates :description, presence: true
   validates :thumbnail, presence: true
 
   acts_as_taggable_on :tags, :tag_list
