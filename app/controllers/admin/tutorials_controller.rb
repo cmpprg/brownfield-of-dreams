@@ -5,9 +5,7 @@ class Admin::TutorialsController < Admin::BaseController
 
   def create
     @tutorial = Tutorial.new(create_tutorial_params)
-    @tutorial.save
-    flash[:success] = 'Successfully created tutorial.'
-    redirect_to tutorial_path(@tutorial)
+    @tutorial.save ? happy_new_tutorial(@tutorial) : sad_new_tutorial(@tutorial)
   end
 
   def edit
@@ -36,5 +34,15 @@ class Admin::TutorialsController < Admin::BaseController
 
   def create_tutorial_params
     params.require(:tutorial).permit(:title, :description, :thumbnail)
+  end
+
+  def happy_new_tutorial(tutorial)
+    flash[:success] = 'Successfully created tutorial.'
+    redirect_to tutorial_path(tutorial)
+  end
+
+  def sad_new_tutorial(tutorial)
+    flash[:error] = tutorial.errors.full_messages.to_sentence
+    render action: :new
   end
 end
