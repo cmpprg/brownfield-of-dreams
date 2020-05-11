@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
                 :find_bookmark,
                 :list_tags,
                 :tutorial_name,
-                :github_token_present?
+                :github_token_present?,
+                :visitor?
 
   add_flash_types :success
 
@@ -25,5 +26,9 @@ class ApplicationController < ActionController::Base
 
   def github_token_present?
     current_user.github_token.present?
+  end
+
+  def visitor?
+    current_user.nil?
   end
 end

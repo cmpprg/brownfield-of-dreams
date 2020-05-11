@@ -22,5 +22,27 @@ describe 'Visitor' do
         expect(page).to have_content(tutorial1.description)
       end
     end
+
+    it "can not see tutorials with classroom set to true" do
+      tutorial1 = create(:tutorial)
+      tutorial2 = create(:tutorial, classroom: true)
+      tutorial3 = create(:tutorial)
+
+      create(:video, tutorial_id: tutorial1.id)
+      create(:video, tutorial_id: tutorial1.id)
+      create(:video, tutorial_id: tutorial2.id)
+      create(:video, tutorial_id: tutorial2.id)
+      create(:video, tutorial_id: tutorial3.id)
+      create(:video, tutorial_id: tutorial3.id)
+
+      visit '/'
+
+      expect(page).to have_content(tutorial1.title)
+      expect(page).to have_content(tutorial1.description)
+      expect(page).to have_no_content(tutorial2.title)
+      expect(page).to have_no_content(tutorial2.description)
+      expect(page).to have_content(tutorial3.title)
+      expect(page).to have_content(tutorial3.description)
+    end
   end
 end
