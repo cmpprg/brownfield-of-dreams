@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
                 :find_bookmark,
                 :list_tags,
                 :tutorial_name,
-                :github_token_present?
+                :github_token_present?,
                 :visitor?
 
   add_flash_types :success
