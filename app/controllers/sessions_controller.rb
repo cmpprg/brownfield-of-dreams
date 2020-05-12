@@ -15,7 +15,8 @@ class SessionsController < ApplicationController
   end
 
   def update
-    current_user.update_attribute(:github_token, gather_token)
+    current_user.github_token = gather_token
+    current_user.save(validate: false)
     redirect_to dashboard_path
   end
 
