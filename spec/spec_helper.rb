@@ -37,5 +37,5 @@ RSpec.configure do |config|
   config.shared_context_metadata_behavior = :apply_to_host_groups
 
   OmniAuth.config.test_mode = true
-  WebMock.allow_net_connect!
+  WebMock.disable_net_connect!(allow_localhost: true, allow: 'https://chromedriver.storage.googleapis.com')
 end
