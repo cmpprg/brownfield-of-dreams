@@ -1,0 +1,49 @@
+{
+  "kind": "youtube#playlistListResponse",
+  "etag": "uAn_qEN9J5iXHd3DrA_FH67Sf5k",
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#playlist",
+      "etag": "PPKINLzV-QeQi21sXnIgvQyzq50",
+      "id": "FLTfabOKD7Yty6sDF4POBVqA",
+      "snippet": {
+        "publishedAt": "2008-11-07T01:20:14Z",
+        "channelId": "UCTfabOKD7Yty6sDF4POBVqA",
+        "title": "Favorites",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CKx8yuFCw1Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CKx8yuFCw1Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CKx8yuFCw1Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/CKx8yuFCw1Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "Joe Collins",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Favorites",
+          "description": ""
+        }
+      }
+    }
+  ]
+}

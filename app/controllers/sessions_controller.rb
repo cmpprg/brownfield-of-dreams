@@ -14,13 +14,26 @@ class SessionsController < ApplicationController
     end
   end
 
+  def update
+    current_user.github_token = gather_token
+    current_user.save(validate: false)
+    redirect_to dashboard_path
+  end
+
   def destroy
     session[:user_id] = nil
     redirect_to root_path
   end
 
+<<<<<<< HEAD
   def bookmark_notice
     flash[:error] = 'User must login to bookmark videos.'
     redirect_back(fallback_location: root_path)
+=======
+  private
+
+  def gather_token
+    request.env['omniauth.auth']['credentials']['token']
+>>>>>>> 811be79ba339d6157704742de6226a1480646383
   end
 end
