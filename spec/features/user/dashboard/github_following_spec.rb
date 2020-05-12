@@ -2,8 +2,13 @@ require "rails_helper"
 
 RSpec.describe 'as a user on the user dashboard', type: :feature do
   before(:each) do
-    user = create(:user, github_token: ENV["GITHUB_TEST_API_KEY"])
+    user = create(:user, github_token: 'user_token')
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    following_fixture = File.read('spec/fixtures/github_following.json')
+    stub_request(:get, "https://api.github.com/user/following?access_token=user_token").
+    to_return(status: 200, body: following_fixture)
+    allow_any_instance_of(FollowersFactory).to receive(:return_collection).and_return([])
+    allow_any_instance_of(RepositoryFactory).to receive(:return_collection).and_return([])
   end
 
   it 'I should see a section for "Following" within the section for "Github"' do

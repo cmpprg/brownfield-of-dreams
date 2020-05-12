@@ -6,6 +6,9 @@ describe "An Admin can edit a tutorial" do
 
   scenario "by adding a video", :js do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
+    single_video = File.read('spec/fixtures/youtube_single_video.json')
+    stub_request(:get, "https://www.googleapis.com/youtube/v3/videos?id=J7ikFUlkP_k&key=AIzaSyAtTp3fGqcu-LCxliFHUR035EtIpuXzqs4&part=snippet,contentDetails,statistics").
+      to_return(status: 200, body: single_video)
 
     visit edit_admin_tutorial_path(tutorial)
 
