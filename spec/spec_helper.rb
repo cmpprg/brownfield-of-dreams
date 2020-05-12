@@ -1,5 +1,6 @@
 require "omniauth"
 require 'webmock/rspec'
+
 RSpec.configure do |config|
 
   config.before(:suite) do
@@ -36,4 +37,5 @@ RSpec.configure do |config|
   config.shared_context_metadata_behavior = :apply_to_host_groups
 
   OmniAuth.config.test_mode = true
+  WebMock.disable_net_connect!(allow_localhost: true)
 end
