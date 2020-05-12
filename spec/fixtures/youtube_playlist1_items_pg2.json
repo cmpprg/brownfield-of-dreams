@@ -1,0 +1,414 @@
+{
+ "kind": "youtube#playlistItemListResponse",
+ "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/q5bgBj85WyMoOwpNfbFCBE7hwoc\"",
+ "prevPageToken": "CDIQAQ",
+ "pageInfo": {
+  "totalResults": 65,
+  "resultsPerPage": 50
+ },
+ "items": [
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/Y6VwSQTz9kz87EbnScoSfATsbLw\"",
+   "id": "RkxUZmFiT0tEN1l0eTZzREY0UE9CVnFBLkJCQTBEMDQwOTA1QzYwNjU=",
+   "snippet": {
+    "publishedAt": "2009-10-02T08:02:13.000Z",
+    "channelId": "UCTfabOKD7Yty6sDF4POBVqA",
+    "title": "When Cars Had Fins",
+    "description": "I wrote this poem a few years ago.  I was thinking of putting a bunch of my old photos from the scrapbook up with some Rock-n-Roll by Dagmar and the Seductones, then Dagmar reminded me of the poem, and I decided that they might just make a good background for it, so I put it together that way.   All the cars in the early part of the video were either mine, or relatives of mine.   Some near the end were from 1970's car shows in Georgia, Stone Mountain and Andalusia Alabama rod run.  \n\nAlso:  I've had a few folks ask for the words, so I posted them here below.  Thanks.  \n\nWhen Cars Had Fins\n\nSo, I've got this old car,\na Hot Rod...\na serious piece of iron\na duel exhaust Rumbler\na tire smoking\ngear shifting\nfull bore screaming\nhunk of Detroit\nvintage technology\nguzzling $3 a gallon gasoline\nand polluting the environment and\nspeeding my heart\nlike a mainline shot\nof adrenalin\nevery time I step on the gas....\n\nYou can't get that \nfrom no Japaneeze\nhunk of tin...\nNo matter if it does have\nmore technology involved\nthan the Apollo Moon Lander...\n\nThere ain't no substitute for\nvintage American iron\nthumping\nun-economially\nmatching\nbeat for beat\nthe rhythm of my\nteen age heart....\n\nSometimes\nI go out and I\nget in her and I\nthromp on the accelerator\na half dozen times \nto get a\ngood shot of gas down the\ncarburetor and into the intake \nand in range of the spark plug/pistons\nso I can turn over the starter and\nlisten to her catch and lope and\nstutter into life,\nrunning on seven cylinders\ntill that broken ring\nworn camshaft\npiston wakes up and even then\nshe doesn't \nsmooth out....\n'cause she ain't smooth...\n\nAin't supposed to be smooth...\n\nShe is meant to run with that\nwicked kabooka   kabooka\nkabooka rumble\njust like Ed Iskenderian\nintended her to do...\n\nI ease her into gear and \nslowly release the clutch and\nshe lurches and catches and\nvibrates\nlike a rocket\nwaiting on the lunching pad for the countdown\nand when I do gas her\nshe sings\nrhythm and harmony\nout of twin pipes\nbarks rubber between the\ngears and pins me back\nin my seat..\n\nAs the speedometer climbs and\nmy awareness of the likelihood of\nsome rookie police officer\nout there\nsomewhere\nwho never had a chance\nto chase down a\nvintage piece of Hot Rod\nhistory,\nwaiting, like a kid\nanxious to loose his\nvirginity\ncauses me to\nback off\njust shy of 100 miles\nan hour\nand let her drift down to a\nnearly acceptable\nspeed\n'cause I don't want to\ngive him the\nsatisfaction....\n\nThe old cops\nwho grew up\nstreet racing\nlike me\ndon't care....\n\nThey look the other way\nor wave and smile\nappreciating someone\nwilling to make a commitment\nto keep a little bit\nof the old life\nalive...\na little longer\neven if the odds\ninsurance prices\npollution laws\nrust\nand the\nhigh cost of gasoline\nstands against it.....\n\nFor there is something good\nin the heart of an old man like me\nwho can remember\nwhat it was like\nto be a kid\nin America\nwhen cars\nhad fins.....\n\n12/07/2005\n\nRichard Peek",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/xnPQp-PwqXQ/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/xnPQp-PwqXQ/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/xnPQp-PwqXQ/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Joe Collins",
+    "playlistId": "FLTfabOKD7Yty6sDF4POBVqA",
+    "position": 50,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "xnPQp-PwqXQ"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/AktK3bxUD9AZNG8Ui9JpJDJQ890\"",
+   "id": "RkxUZmFiT0tEN1l0eTZzREY0UE9CVnFBLjA0RTUxMjg2RkQzNUE3QkU=",
+   "snippet": {
+    "publishedAt": "2009-09-21T00:57:54.000Z",
+    "channelId": "UCTfabOKD7Yty6sDF4POBVqA",
+    "title": "Tom T Hall -The Engineers Don't Wave From The Trains Anymore",
+    "description": "Tom T Hall song together with a video I've made using the fabulous Trainz railroad simulator",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/rdQxYWiY4fM/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/rdQxYWiY4fM/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/rdQxYWiY4fM/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Joe Collins",
+    "playlistId": "FLTfabOKD7Yty6sDF4POBVqA",
+    "position": 51,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "rdQxYWiY4fM"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/su3kb7jq6BaSy5L4liGFsvff3is\"",
+   "id": "RkxUZmFiT0tEN1l0eTZzREY0UE9CVnFBLjU5REQ0NzY0QzUwMjkyOTI=",
+   "snippet": {
+    "publishedAt": "2009-09-03T06:47:13.000Z",
+    "channelId": "UCTfabOKD7Yty6sDF4POBVqA",
+    "title": "MEGA Recorder - SONY TC 530 Stereo Reel to Reel Tape Recorder",
+    "description": "Sponsored by:\r\n\r\nAbundance Genie DSPP Subliminal Messages Program. Release the power of your unconscious mind to get more out of life! It's the Magic of Human Potential empowered by positively affirming subliminal messages. For more information on Abundance Genie DSPP Subliminal Messages Program, please visit our Web page at:\r\n\r\nhttp://www.clydesight.com/DSPP/AG.html\r\n\r\n\r\n********\r\n\r\nThis video explores the SONY TC 530  vintage 7-inch stereophonic reel to reel tape recorder. It was originally sold in 1967. This tape recorder appears to have been well made, built to last (it still works after 42 years!) and is typical of SONY's 1960's excellent quality. It has very good stereo separation and for some reason, SONY labeled it on the head cover, 'sterecorder'. \r\n\r\nThe vintage reel to reel stereo tape recorder has some unique features, including a retractable pinch roller for easy tape threading, a four speaker system (two bass speakers mounted in the cabinet, two satellite speakers that make up the lid), independent left and right record controls, and a true Bass/Treble amplifier circuit. Although only a two head, single motor machine, it has three speeds, remarkably low wow and flutter (less than .10% @ 7 ½ ips amazing for a time when most machines only achieved a  .25% rating) and room filling 'warm' sound that is so nostalgic in today's audio world.\r\n\r\nThe tape recorder came DOA from E-Bay (the seller was selling it for parts)  and had some serious mechanical and electrical problems. The left channel amplifier was 'blown'. It was restored by John Costas of Medford Electronics (Massachusetts). \r\n\r\nMedford Electronics will repair the electronics of a machine shipped to them for a reasonable cost.\r\n\r\nContact Medford Electronics at: http://www.medfordtvandelectronics.com if you have a machine in need of some help!\r\n\r\nThanks to John, and the mechanical reconstruction I performed on the SONY TC 530 stereo reel to reel tape recorder, it is now in almost perfect condition, and the sound is extremely 'present' and a pleasure to hear. This tape recorder was built when SONY was making remarkably fine tape recorders and it is a tribute to SONY engineering that this reel to reel tape recorder has lasted this long, and still works so well.\r\n\r\nWe hope you enjoy this video exploring this vintage reel to reel tape recorder that is now part of the ClydeSight Collection!\r\n\r\n*********\r\nCopyright Disclaimer:\r\n\r\nThis is an educational video, a critique, and report on an historic piece of vintage audio electronic equipment that is no longer manufactured or sold in stores. It is covered by the Fair Use Section of  U.S. Copyright Law:\r\n\r\n\"Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for \"fair use\" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favor of fair use.\"\r\n\r\nThe opening and closing music featured in this video is a performance of a fanfare produced as a part of a demo tape for the SONY TC 530 tape recorder and the vintage recording came with the machine. It is used for demonstration purposes ONLY.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/egybhmaGKDI/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/egybhmaGKDI/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/egybhmaGKDI/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Joe Collins",
+    "playlistId": "FLTfabOKD7Yty6sDF4POBVqA",
+    "position": 54,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "egybhmaGKDI"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/FBciiCwt5Y6NlGaAlyCGC1Xdfc4\"",
+   "id": "RkxUZmFiT0tEN1l0eTZzREY0UE9CVnFBLkRGRTJBMzQzMTBCNkIxNjk=",
+   "snippet": {
+    "publishedAt": "2009-07-23T04:51:32.000Z",
+    "channelId": "UCTfabOKD7Yty6sDF4POBVqA",
+    "title": "PC vs Mac",
+    "description": "The Original Designer Of This Video Can Be Found Here:\n\nHunter Cressall\nYouTube Channel: Vexxarr (http://www.youtube.com/user/Vexxarr)\nhttp://www.huntercressall.com\nhttps://www.facebook.com/hunter.cressall\n\nAn original anti-mac advertisement that caused many laughs.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/iEAGmBRC1dc/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/iEAGmBRC1dc/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/iEAGmBRC1dc/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Joe Collins",
+    "playlistId": "FLTfabOKD7Yty6sDF4POBVqA",
+    "position": 56,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "iEAGmBRC1dc"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/saWAXEsf7rkKQ74a9J8dNdDZNlo\"",
+   "id": "RkxUZmFiT0tEN1l0eTZzREY0UE9CVnFBLjYyNjMxMzJCMDRBREI3QkU=",
+   "snippet": {
+    "publishedAt": "2009-05-27T15:03:20.000Z",
+    "channelId": "UCTfabOKD7Yty6sDF4POBVqA",
+    "title": "Private video",
+    "description": "This video is private.",
+    "channelTitle": "Joe Collins",
+    "playlistId": "FLTfabOKD7Yty6sDF4POBVqA",
+    "position": 57,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "tggLYE87Ed0"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/Ic1I9vCx28N9_Q9itUjvSR8QQ_w\"",
+   "id": "RkxUZmFiT0tEN1l0eTZzREY0UE9CVnFBLjQwM0QzMDRBMEVFOEUzMEQ=",
+   "snippet": {
+    "publishedAt": "2009-05-25T06:55:51.000Z",
+    "channelId": "UCTfabOKD7Yty6sDF4POBVqA",
+    "title": "Ernie Kovacs and Edie Adams pitch their TV sponsor...\"Food\"",
+    "description": "[From \"Kovacs Corner\" on YouTube.com] - Ernie and Edie satirize TV sponsors and their viewers.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/Q1VNpi6JnTs/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/Q1VNpi6JnTs/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/Q1VNpi6JnTs/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Joe Collins",
+    "playlistId": "FLTfabOKD7Yty6sDF4POBVqA",
+    "position": 58,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "Q1VNpi6JnTs"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/Uthf9GPRkvWwT4h_h7f9dA75Uw4\"",
+   "id": "RkxUZmFiT0tEN1l0eTZzREY0UE9CVnFBLjZFM0I4QzFEQjdDRUMyNTY=",
+   "snippet": {
+    "publishedAt": "2009-05-14T07:57:28.000Z",
+    "channelId": "UCTfabOKD7Yty6sDF4POBVqA",
+    "title": "Steam train:  NW 611 6 Runbys repost",
+    "description": "Corrected aspext ratio. NW J 611 at Culpeper, Amherst, Redhill, Orange, Culpeper again and Brandy Station, VA on 4/25/92.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/pyJBfawUSxI/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/pyJBfawUSxI/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/pyJBfawUSxI/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Joe Collins",
+    "playlistId": "FLTfabOKD7Yty6sDF4POBVqA",
+    "position": 59,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "pyJBfawUSxI"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/RfxcD4ED3uCKn8JJ230wzFtMRIs\"",
+   "id": "RkxUZmFiT0tEN1l0eTZzREY0UE9CVnFBLjdDM0I2RkQ3MjIwNjYyNkE=",
+   "snippet": {
+    "publishedAt": "2009-03-26T03:49:14.000Z",
+    "channelId": "UCTfabOKD7Yty6sDF4POBVqA",
+    "title": "Philips N2229AV portable cassette recorder",
+    "description": "This is my Philips N2229AV portable cassette recorder. It's a nice cassette recorder with some really cool features.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/PPZIhhZjVdQ/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/PPZIhhZjVdQ/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/PPZIhhZjVdQ/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Joe Collins",
+    "playlistId": "FLTfabOKD7Yty6sDF4POBVqA",
+    "position": 60,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "PPZIhhZjVdQ"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/4bGc4c0aoD3J4YcGrqtIw2Yphao\"",
+   "id": "RkxUZmFiT0tEN1l0eTZzREY0UE9CVnFBLkRCQTdFMkJBMkRCQUFBNzM=",
+   "snippet": {
+    "publishedAt": "2009-03-06T08:42:48.000Z",
+    "channelId": "UCTfabOKD7Yty6sDF4POBVqA",
+    "title": "AM (((STEREO))) 1190 WOWO Skywave DX Part 1",
+    "description": "A \"scoped\" nighttime skywave DX recording of Fort Wayne, Indiana's 1190 WOWO on December 5th, 1992, received 460 miles away in eastern Pennsylvania on a Realistic TM-152 tuner in AM Stereo. (WOWO was transmitting the Magnavox AM Stereo system at the time, but they added a 25 Hz pilot tone to allow AM Stereo receivers designed for the Motorola C-Quam system, such as the TM-152, to decode their signal in stereo.) This audio was taken from a Type I non-Dolby cassette recording with no EQ or other sonic enhancement other than a 10 kHz whistle filter. A great example of just how good AM Stereo can sound, even over long-distance skywave reception!\n\nTo download an MP3 of this recording, click here: amstereo.org/files/wowo1.mp3",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/9_5QTkGEflQ/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/9_5QTkGEflQ/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/9_5QTkGEflQ/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Joe Collins",
+    "playlistId": "FLTfabOKD7Yty6sDF4POBVqA",
+    "position": 61,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "9_5QTkGEflQ"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/VMVJuq2c2XuWge1W4QIGhoeGLdk\"",
+   "id": "RkxUZmFiT0tEN1l0eTZzREY0UE9CVnFBLjk0OUNBQUU5OEMxMDFCNTA=",
+   "snippet": {
+    "publishedAt": "2009-02-24T05:07:26.000Z",
+    "channelId": "UCTfabOKD7Yty6sDF4POBVqA",
+    "title": "Pachelbel Rant",
+    "description": "A comedian rants about how much it sucks to play Pachelbel's Canon in D on a cello.  Recorded live at Penn State, this piece by comedian/musician Rob Paravonian has been a favorite on the Dr. Demento Show.\n\nVisit Rob at: http://RobPRocks.com, http://fb.com/RobPRocks, or http://twitter.com/RobPRocks",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/JdxkVQy7QLM/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/JdxkVQy7QLM/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/JdxkVQy7QLM/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Joe Collins",
+    "playlistId": "FLTfabOKD7Yty6sDF4POBVqA",
+    "position": 62,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "JdxkVQy7QLM"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/BBOeSq5pfR2FK1j3XYWWMHsPsts\"",
+   "id": "RkxUZmFiT0tEN1l0eTZzREY0UE9CVnFBLjE3RjZCNUE4QjYzNDk5Qzk=",
+   "snippet": {
+    "publishedAt": "2009-01-31T22:58:17.000Z",
+    "channelId": "UCTfabOKD7Yty6sDF4POBVqA",
+    "title": "how to make a vinyl record - cheesy style documentary",
+    "description": "how to cut a vinyl record - dubplate",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/5W1zDsdSdIM/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/5W1zDsdSdIM/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/5W1zDsdSdIM/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Joe Collins",
+    "playlistId": "FLTfabOKD7Yty6sDF4POBVqA",
+    "position": 63,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "5W1zDsdSdIM"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/9rWDiPULlghBQ9qRNrc8Dh1257w\"",
+   "id": "RkxUZmFiT0tEN1l0eTZzREY0UE9CVnFBLkVBRjZDOThFQUM3RkVGRkU=",
+   "snippet": {
+    "publishedAt": "2008-11-07T01:20:14.000Z",
+    "channelId": "UCTfabOKD7Yty6sDF4POBVqA",
+    "title": "Trains in the Rocky Mt, NC Area",
+    "description": "In this video you will see the Nash County Railroad, Amtrak P089, P079, P091, and various CSX freight trains. Scenes take place in Nashville, NC, Battleboro, NC, and Rocky Mount, NC.\r\n\r\nVideo Uploaded & Copyrighted by Jared Davis of Whistlepost Productions.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/_aLzni18jXI/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/_aLzni18jXI/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/_aLzni18jXI/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Joe Collins",
+    "playlistId": "FLTfabOKD7Yty6sDF4POBVqA",
+    "position": 64,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "_aLzni18jXI"
+    }
+   }
+  }
+ ]
+}

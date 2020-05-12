@@ -2,8 +2,13 @@ require 'rails_helper'
 
 RSpec.describe 'as a user when i visit my dashboard', type: :feature do
   before(:each) do
-    user = create(:user, github_token: ENV["GITHUB_TEST_API_KEY"])
+    user = create(:user, github_token: "user_token")
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    followers_fixture = File.read('spec/fixtures/github_followers.json')
+    stub_request(:get, "https://api.github.com/user/followers?access_token=user_token").
+    to_return(status: 200, body: followers_fixture)
+    allow_any_instance_of(FolloweesFactory).to receive(:return_collection).and_return([])
+    allow_any_instance_of(RepositoryFactory).to receive(:return_collection).and_return([])
   end
 
   it 'Github section has Followers section with a list of all followers' do

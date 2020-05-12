@@ -26,7 +26,7 @@ gem 'omniauth-google-oauth2'
 gem 'will_paginate'
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'omniauth-census', git: "https://github.com/turingschool-projects/omniauth-census"
-
+gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -48,6 +48,10 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rubocop-rails'
   gem 'travis'
+end
+
+group :test do
+  gem 'webmock'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

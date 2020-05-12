@@ -19,7 +19,7 @@ class GithubV3API
 
   def connect
     Faraday.new('https://api.github.com') do |req|
-      req.headers['Authorization'] = @api_key
+      req.params['access_token'] = @api_key
     end
   end
 

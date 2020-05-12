@@ -3,6 +3,15 @@ require "rails_helper"
 RSpec.describe "As an admin", type: :feature do
   let(:admin)    { create(:admin) }
   before(:each) do
+    page1 = File.read('spec/fixtures/youtube_playlist1_items_pg1.json')
+    page2 = File.read('spec/fixtures/youtube_playlist1_items_pg2.json')
+    playlist_info = File.read('spec/fixtures/youtube_playlist1.json')
+    stub_request(:get, "https://www.googleapis.com/youtube/v3/playlists?id=FLTfabOKD7Yty6sDF4POBVqA&key=AIzaSyAtTp3fGqcu-LCxliFHUR035EtIpuXzqs4&part=snippet").
+      to_return(status: 200, body: playlist_info)
+    stub_request(:get, "https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyAtTp3fGqcu-LCxliFHUR035EtIpuXzqs4&maxResults=50&pageToken=&part=snippet&playlistId=FLTfabOKD7Yty6sDF4POBVqA").
+      to_return(status: 200, body: page1)
+    stub_request(:get, "https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyAtTp3fGqcu-LCxliFHUR035EtIpuXzqs4&maxResults=50&pageToken=CDIQAA&part=snippet&playlistId=FLTfabOKD7Yty6sDF4POBVqA").
+      to_return(status: 200, body: page2)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
   end
 
@@ -50,14 +59,14 @@ RSpec.describe "As an admin", type: :feature do
       it "I see all videos and in the same order as on YouTube" do
         visit '/admin/import_playlist/new'
 
-        fill_in :playlist_id, with: "PL1Y67f0xPzdMzHBjW0k2uGSoiKM3py--_"
+        fill_in :playlist_id, with: "FLTfabOKD7Yty6sDF4POBVqA"
         click_button 'Import'
         click_link('View it here')
-        expect(page.all('.show-link')[0].native.children.text).to eql('FE Project: Wheel of Fortune (Jake Lauer)')
-        expect(page.all('.show-link')[1].native.children.text).to eql('FE Project: Terminal Commander (Heather Hartley)')
-        expect(page.all('.show-link')[2].native.children.text).to eql('FE Project: Rabbit Hole (Jamie Rushford)')
-        expect(page.all('.show-link')[3].native.children.text).to eql('BE Project: Ticket Talk (Andrew Johnson, Evette Telyas, Corina Allen, Tylor Schafer)')
-        expect(page.all('.show-link')[4].native.children.text).to eql('FE + BE: Mockr (Sejin Kim, Aurie Gochenour, Djavan Munroe, Eric O\'Neill)')
+        expect(page.all('.show-link')[0].native.children.text).to eql('RCA 1957 FILM introducting High Fidelity, Stereo Sound, and their new 1957 Hi-Fi\'s')
+        expect(page.all('.show-link')[1].native.children.text).to eql('A SONY Stereo Demonstration! Exploring the SONY TC126 Vintage Stereo Cassette Recorder')
+        expect(page.all('.show-link')[2].native.children.text).to eql('Rose Marie on the staying-power of The Dick Van Dyke Show - EMMYTVLEGENDS.ORG')
+        expect(page.all('.show-link')[3].native.children.text).to eql('Ubuntu 11.04')
+        expect(page.all('.show-link')[4].native.children.text).to eql('INTERFACE - Tips, Tricks & How-To - How To Setup A Turntable')
       end
     end
   end
