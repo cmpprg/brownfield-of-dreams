@@ -4,7 +4,8 @@ class ApplicationController < ActionController::Base
                 :list_tags,
                 :tutorial_name,
                 :github_token_present?,
-                :visitor?
+                :visitor?,
+                :account_with_uid?
 
   add_flash_types :success
 
@@ -30,5 +31,9 @@ class ApplicationController < ActionController::Base
 
   def visitor?
     current_user.nil?
+  end
+
+  def account_with_uid?(uid)
+    User.where(github_uid: uid).exists?
   end
 end
