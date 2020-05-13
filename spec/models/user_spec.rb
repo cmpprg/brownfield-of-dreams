@@ -16,6 +16,8 @@ RSpec.describe User, type: :model do
       user = create(:user)
       expect(user.activation_status).to eql('inactive')
       user.activate_account
+
+      user.reload
       expect(user.activation_status).to eql('active')
     end
   end
