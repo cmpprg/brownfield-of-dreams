@@ -3,7 +3,7 @@ class User < ApplicationRecord
   has_many :videos, through: :user_videos
 
   validates :email, uniqueness: true, presence: true
-  validates :password, presence: true
+  validates :password, presence: true, on: :create
   validates :first_name, presence: true
 
   enum role: { default: 0, admin: 1 }
@@ -12,6 +12,5 @@ class User < ApplicationRecord
 
   def activate_account
     update(activation_status: 'active')
-    save(validate: false)
   end
 end
