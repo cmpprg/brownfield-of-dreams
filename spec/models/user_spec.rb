@@ -11,6 +11,15 @@ RSpec.describe User, type: :model do
     it { should have_many(:user_videos).dependent(:destroy)}
   end
 
+  describe 'instance methods' do
+    it "can set its activation status to active" do
+      user = create(:user)
+      expect(user.activation_status).to eql('inactive')
+      user.activate_account
+      expect(user.activation_status).to eql('active')
+    end
+  end
+
   describe 'roles' do
     it 'can be created as default user' do
       user = User.create(email: 'user@email.com', password: 'password', first_name:'Jim', role: 0)
