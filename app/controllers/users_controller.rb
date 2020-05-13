@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def show
+    @bookmarks_collection = UserVideo.get_bookmarks(current_user)
     return unless github_token_present?
 
     @repos = RepositoryFactory.new(current_user).return_collection

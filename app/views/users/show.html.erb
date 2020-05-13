@@ -9,8 +9,20 @@
     <li> <%= current_user.email%> </li>
     <li> Status: <%= current_user.activation_status.capitalize%> </li>
   </ul>
-  <section>
+  <section class='bookmarks'>
     <h1>Bookmarked Segments</h1>
+    <% if @bookmarks_collection.empty? %>
+      <p>You haven't added any bookmarks yet.
+    <% else %>
+      <% @bookmarks_collection.each do |tutorial| %>
+        <h3 id="tutorial-<%= tutorial[1][0].tutorial_id %>"><%= tutorial[0] %></h3>
+        <% tutorial[1].each do |video| %>
+          <div id="video-<%= video.video_id %>">
+            <%= link_to "#{video.video_title}", "/tutorials/#{video.tutorial_id}?video_id=#{video.video_id}", class: "video-link" %><br>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
   </section>
   <% if github_token_present? %>
     <section class="github">
@@ -18,23 +30,41 @@
 
       <section class="repos">
         <h3>Repositories</h3>
-        <% @repos.each_with_index do |repo, index| %>
-          <p class="repo"><%= link_to repo.name, repo.url, id:"#repo-#{index}" %></p>
+        <% if @repos.empty? %>
+          <p>You haven't added any repos yet.</p>
+        <% else %>
+          <% @repos.each_with_index do |repo, index| %>
+            <div class="repo">
+              <%= link_to repo.name, repo.url, id:"#repo-#{index}" %><br>
+            </div>
+          <% end %>
         <% end %>
       </section>
 
 
       <section class='followers'>
         <h3>Followers</h3>
-        <% @followers.each_with_index do |follower, index| %>
-          <p class='follower'><%= link_to follower.name, follower.url, id:"#follower-#{index}" %></p>
+        <% if @followers.empty? %>
+          <p>No followers yet.</p>
+        <% else %>
+          <% @followers.each_with_index do |follower, index| %>
+            <div class='follower'>
+              <%= link_to follower.name, follower.url, id:"#follower-#{index}" %><br>
+            </div>
+          <% end %>
         <% end %>
       </section>
 
       <section class="following">
         <h3>Following</h3>
-        <% @followees.each_with_index do |followee, index| %>
-          <p class='followee'><%= link_to followee.name, followee.url, id:"#followee-#{index}" %></p>
+        <% if @followees.empty? %>
+          <p>You haven't started following anyone yet.</p>
+        <% else %>
+          <% @followees.each_with_index do |followee, index| %>
+            <div class='followee'>
+              <%= link_to followee.name, followee.url, id:"#followee-#{index}" %><br>
+            </div>
+          <% end %>
         <% end %>
       </section>
 

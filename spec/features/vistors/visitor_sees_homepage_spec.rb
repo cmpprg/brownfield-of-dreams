@@ -3,8 +3,8 @@ require 'rails_helper'
 describe 'Visitor' do
   describe 'on the home page' do
     it 'can see a list of tutorials' do
-      tutorial1 = create(:tutorial)
-      tutorial2 = create(:tutorial)
+      tutorial1 = create(:tutorial, title: 'Tutorial 1', description: 'Tutorial 1')
+      tutorial2 = create(:tutorial, title: 'Tutorial 2', description: 'Tutorial 2')
 
       video1 = create(:video, tutorial_id: tutorial1.id)
       video2 = create(:video, tutorial_id: tutorial1.id)
@@ -24,9 +24,9 @@ describe 'Visitor' do
     end
 
     it "can not see tutorials with classroom set to true" do
-      tutorial1 = create(:tutorial)
-      tutorial2 = create(:tutorial, classroom: true)
-      tutorial3 = create(:tutorial)
+      tutorial1 = create(:tutorial, title: 'Tutorial 1', description: 'Tutorial 1')
+      tutorial2 = create(:tutorial, title: 'Tutorial 2', description: 'Tutorial 2', classroom: true)
+      tutorial3 = create(:tutorial, title: 'Tutorial 3', description: 'Tutorial 3')
 
       create(:video, tutorial_id: tutorial1.id)
       create(:video, tutorial_id: tutorial1.id)
