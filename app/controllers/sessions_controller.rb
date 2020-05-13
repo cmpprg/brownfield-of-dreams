@@ -15,8 +15,7 @@ class SessionsController < ApplicationController
   end
 
   def update
-    current_user.github_token = gather_token
-    current_user.save(validate: false)
+    current_user.update(github_info)
     redirect_to dashboard_path
   end
 
@@ -27,7 +26,15 @@ class SessionsController < ApplicationController
 
   private
 
-  def gather_token
+  def gather_github_token
     request.env['omniauth.auth']['credentials']['token']
+  end
+
+  def gather_github_uid
+    request.env['omniauth.auth']['uid']
+  end
+
+  def github_info
+    { github_token: gather_github_token, github_uid: gather_github_uid }
   end
 end
