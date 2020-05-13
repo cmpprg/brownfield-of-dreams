@@ -10,7 +10,6 @@ describe 'Tutorials API' do
     video3 = create(:video, tutorial_id: tutorial2.id)
     video4 = create(:video, tutorial_id: tutorial2.id)
 
-
     get '/api/v1/tutorials'
 
     expect(response).to be_successful
@@ -18,11 +17,11 @@ describe 'Tutorials API' do
     parsed = JSON.parse(response.body, symbolize_names: true)
 
     expect(parsed.first[:id]).to eq(tutorial1.id)
-    expect(parsed.first[:videos].first[:id]).to eq(video1.id)
-    expect(parsed.first[:videos].last[:id]).to eq(video2.id)
+    expect(parsed.first[:videos].sort_by { |x| x[:id] }.first[:id]).to eq(video1.id)
+    expect(parsed.first[:videos].sort_by { |x| x[:id] }.last[:id]).to eq(video2.id)
     expect(parsed.last[:id]).to eq(tutorial2.id)
-    expect(parsed.last[:videos].first[:id]).to eq(video3.id)
-    expect(parsed.last[:videos].last[:id]).to eq(video4.id)
+    expect(parsed.last[:videos].sort_by { |x| x[:id] }.first[:id]).to eq(video3.id)
+    expect(parsed.last[:videos].sort_by { |x| x[:id] }.last[:id]).to eq(video4.id)
   end
 
   it 'sends a single tutorial' do
@@ -39,9 +38,8 @@ describe 'Tutorials API' do
     expect(response).to be_successful
 
     parsed = JSON.parse(response.body, symbolize_names: true)
-
     expect(parsed[:id]).to eq(tutorial1.id)
-    expect(parsed[:videos].first[:id]).to eq(video1.id)
-    expect(parsed[:videos].last[:id]).to eq(video2.id)
+    expect(parsed[:videos].sort_by { |x| x[:id] }.first[:id]).to eq(video1.id)
+    expect(parsed[:videos].sort_by { |x| x[:id] }.last[:id]).to eq(video2.id)
   end
 end
