@@ -40,21 +40,20 @@ describe 'vister can create an account', :js do
   end
 
   context "As a newly registered user" do
-    context "when I click link in my email 'Visit here to activate your account.'" do
-      it "I am take to a page that says 'Thank you! Your account is now activated.'" do
-        # allow_any_instance_of(AccountActivationMailer).to receive(:inform).and_return("I sent the thing!")
-        # visit new_user_path
-        # fill_in 'user[email]', with: @email
-        # fill_in 'user[first_name]', with: @first_name
-        # fill_in 'user[last_name]', with: @last_name
-        # fill_in 'user[password]', with: @password
-        # fill_in 'user[password_confirmation]', with: @password
-        #
-        # click_on'Create Account'
+    it "I receive an email, click link in my email 'Visit here to activate your account.'" do
+    
+      # allow_any_instance_of(AccountActivationMailer).to receive(:inform).and_return("I sent the thing!")
+      # visit new_user_path
+      # fill_in 'user[email]', with: @email
+      # fill_in 'user[first_name]', with: @first_name
+      # fill_in 'user[last_name]', with: @last_name
+      # fill_in 'user[password]', with: @password
+      # fill_in 'user[password_confirmation]', with: @password
+      #
+      # click_on'Create Account'
 
-        #unable to test properly, come back if there is time and figure this out.
-        # potential need to create class that captures email through ActionMailer, then a class to read?
-      end
+      #unable to test properly, come back if there is time and figure this out.
+      # potential need to create class that captures email through ActionMailer, then a class to read?
     end
 
     it "after account activated display 'status: active' on the dashboard" do
@@ -65,6 +64,17 @@ describe 'vister can create an account', :js do
 
       expect(page).to have_content("Status: Active")
     end
-  end
 
+    it "After activation users are taken to page with thank you message and account is activated." do
+      user = create(:user)
+
+      expect(user.active?).to eql(false)
+
+      visit account_activation_path(user)
+      user.reload
+
+      expect(user.active?).to eql(true)
+      expect(page).to have_content('Thank you! Your account is now activated.')
+    end
+  end
 end
