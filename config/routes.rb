@@ -47,5 +47,5 @@ Rails.application.routes.draw do
   resources :user_videos, only:[:create, :destroy]
   get '/auth/github/callback', to: 'sessions#update'
 
-  get '/acount_activation', to: 'account_activation#show'
+  get '/account_activation/:id', to: 'account_activation#show', as: 'account_activation'
 end
