@@ -24,13 +24,16 @@ RSpec.describe 'as a user when i visit my dashboard', type: :feature do
       stub_request(:get, "https://api.github.com/user/following?access_token=wooden_nickel_token").
          to_return(status: 200, body: @following_fixture)
 
-      OmniAuth.config.mock_auth[:github]= {'credentials' => {'token' => 'wooden_nickel_token'}}
-      
+      OmniAuth.config.mock_auth[:github]= {'credentials' => {'token' => 'wooden_nickel_token'},
+                                           'uid' => "12345678"}
+
       expect(@user.github_token).to eql(nil)
+      expect(@user.github_uid).to eql(nil)
 
       click_link('Connect to Github')
 
       expect(@user.github_token).to eql('wooden_nickel_token')
+      expect(@user.github_uid).to eql('12345678')
 
       expect(current_path).to eql('/dashboard')
 
