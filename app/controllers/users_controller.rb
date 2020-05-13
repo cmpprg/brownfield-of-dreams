@@ -22,7 +22,6 @@ class UsersController < ApplicationController
     params.require(:user).permit(:email, :first_name, :last_name, :password)
   end
 
-
   def create_happy_path(user)
     session[:user_id] = user.id
     create_happy_flash(user)
@@ -37,7 +36,7 @@ class UsersController < ApplicationController
   end
 
   def please_activate_flash
-    mess = "This account has not yet been activated. Please check your email."
+    mess = 'This account has not yet been activated. Please check your email.'
     flash[:activation_notice] = mess
   end
 

@@ -12,6 +12,6 @@ class User < ApplicationRecord
 
   def activate_account
     update(activation_status: 'active')
-    self.save(validate: false)
+    save(validate: false)
   end
 end
