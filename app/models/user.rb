@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_secure_password
 
   def activate_account
-    self.activation_status = 1
+    update(activation_status: 'active')
+    self.save(validate: false)
   end
 end
