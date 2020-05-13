@@ -39,9 +39,27 @@ describe 'vister can create an account', :js do
     expect(page).to_not have_content('Sign In')
   end
 
+  it "If user fails to enter required info, sad flash appears and user stays on page." do
+    visit new_user_path
+
+    fill_in 'user[email]', with: @email
+    fill_in 'user[first_name]', with: ''
+    fill_in 'user[last_name]', with: @last_name
+    fill_in 'user[password]', with: @password
+    fill_in 'user[password_confirmation]', with: @password
+
+    click_on'Create Account'
+
+    expect(current_path).to eql('/users')
+
+    expect(find('#user_email').value).to have_content(@email)
+    expect(find('#user_last_name').value).to have_content(@last_name)
+    expect(page).to have_content('First name can\'t be blank')
+  end
+
   context "As a newly registered user" do
     it "I receive an email, click link in my email 'Visit here to activate your account.'" do
-    
+
       # allow_any_instance_of(AccountActivationMailer).to receive(:inform).and_return("I sent the thing!")
       # visit new_user_path
       # fill_in 'user[email]', with: @email
