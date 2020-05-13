@@ -9,4 +9,8 @@ class User < ApplicationRecord
   enum role: { default: 0, admin: 1 }
   enum activation_status: { inactive: 0, active: 1 }
   has_secure_password
+
+  def activate_account
+    self.activation_status = 1
+  end
 end
