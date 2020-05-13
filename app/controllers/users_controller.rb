@@ -26,6 +26,7 @@ class UsersController < ApplicationController
   def create_happy_path(user)
     session[:user_id] = user.id
     create_happy_flash(user)
+    send_activation_email(user)
     please_activate_flash
     redirect_to dashboard_path
   end
@@ -46,5 +47,9 @@ class UsersController < ApplicationController
 
   def create_sad_flash(user)
     flash[:error] = user.errors.full_messages.to_sentence
+  end
+
+  def send_activation_email(user)
+    AccountActivationMailer.inform(user).deliver_now
   end
 end
