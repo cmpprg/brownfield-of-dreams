@@ -18,15 +18,12 @@ RSpec.describe "As a user on the dashboard", type: :feature do
     @follower3 = create(:user, github_uid: '20000004')
     @followee1 = create(:user, github_uid: '10000004')
     @followee2 = create(:user, github_uid: '10000005')
-
   end
 
   context 'If a follower or followee also has an account on this app' do
     it "I should see a link to 'add as friend' next to their handle" do
 
       visit dashboard_path
-
-      # save_and_open_page
 
       within('.followers') do
         within(page.all('.follower')[0]) do
@@ -76,11 +73,15 @@ RSpec.describe "As a user on the dashboard", type: :feature do
         end
       end
 
+      expect(current_path).to eql(dashboard_path)
+
       within('.following') do
         within(page.all('.followee')[4]) do
           click_link 'Add as Friend'
         end
       end
+
+
 
       expect(@user.friends).to include(@follower1)
       expect(@user.friends).to include(@followee2)
