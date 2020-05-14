@@ -13,11 +13,11 @@ RSpec.describe "As a user on the dashboard", type: :feature do
       to_return(body: following)
 
     allow_any_instance_of(RepositoryFactory).to receive(:return_collection).and_return([])
-    create(:user, github_uid: '20000001')
-    create(:user, github_uid: '20000002')
-    create(:user, github_uid: '20000004')
-    create(:user, github_uid: '10000004')
-    create(:user, github_uid: '10000005')
+    @follower1 = create(:user, github_uid: '20000001')
+    @follower2 = create(:user, github_uid: '20000002')
+    @follower3 = create(:user, github_uid: '20000004')
+    @followee1 = create(:user, github_uid: '10000004')
+    @followee2 = create(:user, github_uid: '10000005')
 
   end
 
@@ -63,8 +63,30 @@ RSpec.describe "As a user on the dashboard", type: :feature do
           expect(page).to have_link('Add as Friend')
         end
       end
+    end
 
+    it "I can click add as friend link and they will be my friend." do
+      visit dashboard_path
 
+      expect(@user.friends.empty?).to eql(true)
+
+      within('.followers') do
+        within(page.all('.follower')[0]) do
+          click_link 'Add as Friend'
+        end
+      end
+
+      within('.following') do
+        within(page.all('.followee')[4]) do
+          click_link 'Add as Friend'
+        end
+      end
+
+      expect(@user.friends).to include(@follower1)
+      expect(@user.friends).to include(@followee2)
+      expect(@user.friends).not_to include(@follower2)
+      expect(@user.friends).not_to include(@follower3)
+      expect(@user.friends).not_to include(@followee1)
     end
   end
 end
