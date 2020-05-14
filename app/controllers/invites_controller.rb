@@ -2,8 +2,8 @@ class InvitesController < ApplicationController
   def new; end
 
   def create
-    invitee = get_email_and_name
-    invitee[:email] ? send_invite(invitee) : no_email
+    invitee = gather_email_params
+    invitee[:email] ? send_invite : no_email
     redirect_to '/dashboard'
   end
 
@@ -13,17 +13,21 @@ class InvitesController < ApplicationController
     GithubV3API.new(current_user.github_token, username).user_info
   end
 
-  def get_email_and_name
-    info ||= get_user_info(params[:q_username])
-    { email: info[:email], name: info[:name] }
+  def gather_email_params
+    invitee ||= get_user_info(params[:q_username])
+    { email: invitee[:email],
+      name: invitee[:name],
+      sender_name: get_user_info(current_user.github_handle)[:name] }
   end
 
-  def send_invite(invitee)
-    InviteMailer.invite(invitee).deliver_now
+  def send_invite
+    InviteMailer.invite(gather_email_params).deliver_now
     flash[:success] = 'Successfully sent invite!'
   end
 
   def no_email
-    flash[:notice] = "The Github user you selected doesn't have an email address associated with their account."
+    message1 = "The Github user you selected doesn't have an "
+    message2 = 'email address associated with their account.'
+    flash[:notice] = "#{message1}#{message2}"
   end
 end
