@@ -94,15 +94,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # Rails.application.routes.default_url_options[:host] = 'https://brownfield-jg-rc.herokuapp.com/'
+  Rails.application.routes.default_url_options[:host] = 'https://brownfield-jg-rc.herokuapp.com/'
 
-  ActionMailer::Base.smtp_settings = {
-  :port           => ENV['MAILGUN_SMTP_PORT'],
-  :address        => ENV['MAILGUN_SMTP_SERVER'],
-  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
-  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-  :domain         => 'brownfield-jg-rc.herokuapp.com',
-  :authentication => :plain,
-}
-ActionMailer::Base.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = false
 end
