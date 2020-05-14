@@ -34,7 +34,12 @@ class SessionsController < ApplicationController
     request.env['omniauth.auth']['uid']
   end
 
+  def gather_github_handle
+    request.env['omniauth.auth']['info']['nickname']
+  end
+
   def github_info
-    { github_token: gather_github_token, github_uid: gather_github_uid }
+    { github_token: gather_github_token, github_uid: gather_github_uid,
+      github_handle: gather_github_handle }
   end
 end
