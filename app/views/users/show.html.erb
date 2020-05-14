@@ -50,7 +50,11 @@
         <% else %>
           <% @followers.each_with_index do |follower, index| %>
             <div class='follower'>
-              <%= link_to follower.name, follower.url, id:"#follower-#{index}" %><br>
+              <%= link_to follower.name, follower.url, id:"#follower-#{index}" %> |
+              <% if account_with_uid?(follower.github_uid) %>
+                <%= link_to 'Add as Friend', friendships_path(friend_uid: follower.github_uid), method: :post %>
+              <% end %>
+              <br>
             </div>
           <% end %>
         <% end %>
@@ -63,12 +67,24 @@
         <% else %>
           <% @followees.each_with_index do |followee, index| %>
             <div class='followee'>
-              <%= link_to followee.name, followee.url, id:"#followee-#{index}" %><br>
+              <%= link_to followee.name, followee.url, id:"#followee-#{index}" %> |
+              <% if account_with_uid?(followee.github_uid) %>
+                <%= link_to 'Add as Friend', friendships_path(friend_uid: followee.github_uid), method: :post %>
+              <% end %>
+              <br>
             </div>
           <% end %>
         <% end %>
       </section>
 
+      <section class="friendships">
+        <h3>Friends</h3>
+        <% current_user.friends.each do |friend| %>
+          <div id="friend-<%= friend.id %>">
+            <p><%= friend.github_handle %></p>
+          </div>
+        <% end %>
+      </section>
     </section>
   <% end %>
 </section>
