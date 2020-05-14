@@ -76,6 +76,14 @@
         <% end %>
       </section>
 
+      <section class="friendships">
+        <h3>Friends</h3>
+        <% current_user.friends.each do |friend| %>
+          <div id="friend-<%= friend.id %>">
+            <p><%= friend.github_handle %></p>
+          </div>
+        <% end %>
+      </section>
     </section>
   <% end %>
 </section>
