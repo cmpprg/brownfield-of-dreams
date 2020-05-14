@@ -48,4 +48,5 @@ Rails.application.routes.draw do
   get '/auth/github/callback', to: 'sessions#update'
 
   get '/account_activation/:id', to: 'account_activation#show', as: 'account_activation'
+  post '/friendships', to: 'friendships#create'
 end
