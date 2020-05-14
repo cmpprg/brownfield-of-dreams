@@ -44,5 +44,14 @@ describe 'Visitor' do
       expect(page).to have_content(tutorial3.title)
       expect(page).to have_content(tutorial3.description)
     end
+
+    it "sees a link to 'About' page" do
+      visit '/'
+
+      click_link('About')
+
+      expect(current_path).to eql(about_path)
+      expect(page).to have_content('Turing Tutorials')
+    end
   end
 end
