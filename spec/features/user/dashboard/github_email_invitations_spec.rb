@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'as a user', type: :feature do
   describe 'when i visit my dashboard' do
     before(:each) do
-      user = create(:user, github_token: 'user_token')
+      user = create(:user, github_token: 'user_token', github_handle: 'cmpprg1')
       user1_json1 = File.read('spec/fixtures/github_user1.json')
       user1_json2 = File.read('spec/fixtures/github_user1a.json')
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
